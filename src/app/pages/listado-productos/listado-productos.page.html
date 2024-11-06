@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>listado-productos</ion-title>
+    <ion-buttons>
+      <ion-button (click)="logout()">
+        <ion-icon> name="log-out-outline"></ion-icon>
+        Salir
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listado-productos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of productos">
+      <ion-thumbnail slot="start">
+        <img [src]="p.thumbnail">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ p.title }}</h2>
+        <p>Precio: ${{ p.price }}</p>
+        <p>Descuento: {{ p.discountPercentage }}%</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="cargarMasProductos($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" color="success" loadingText="Cargando Productos"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>

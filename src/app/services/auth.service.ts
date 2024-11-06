@@ -31,7 +31,7 @@ export class AuthService {
 
   // obtener el token
   obtener_token(): string | null{
-    return localStorage.getItem('accesToken')
+    return localStorage.getItem('accessToken')
   }
 
   // Metodod que obtienen headers y token para otras solicitudes
@@ -43,5 +43,9 @@ export class AuthService {
     });
 
 
+  }
+
+  cerrarSesion(): void{
+    localStorage.removeItem('accessToken')
   }
 }

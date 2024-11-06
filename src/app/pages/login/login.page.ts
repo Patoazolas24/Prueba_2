@@ -35,8 +35,9 @@ export class LoginPage implements OnInit {
         // Manejo de respuesta positiva
         (response) => {
           this.authService.insertar_token(response.accessToken)
+          console.log("token insertado")
           this.navCtrl.navigateRoot('/listado-productos') // redirige a pagina productos
-          
+          console.log("Navegando a listado producto")
         },
         (error) => {
           this.mensajeError = "Usuario o contraseña invalida"
