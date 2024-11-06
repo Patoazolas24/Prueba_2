@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>listado-productos</ion-title>
     <ion-buttons>
-      <ion-button (click)="logout()">
+      <ion-button (click)="logout()" class="logout-button">
         <ion-icon> name="log-out-outline"></ion-icon>
         Salir
       </ion-button>
@@ -19,7 +19,10 @@
       <ion-label>
         <h2>{{ p.title }}</h2>
         <p>Precio: ${{ p.price }}</p>
-        <p>Descuento: {{ p.discountPercentage }}%</p>
+        <p>
+          <ion-icon name="arrow-down-outline" style="vertical-align: middle; color: #4caf50;"></ion-icon> <!-- Flecha hacia abajo en verde -->
+          Descuento: {{ p.discountPercentage }}%
+        </p>
       </ion-label>
     </ion-item>
   </ion-list>

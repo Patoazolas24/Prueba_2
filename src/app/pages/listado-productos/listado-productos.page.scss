@@ -1,0 +1,62 @@
+ion-content {
+    --background: #e7dfdf;
+    color: #ffffff;
+  }
+  
+  ion-list {
+    padding: 10px;
+  }
+  
+  ion-item {
+    --background: #696868;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  ion-label h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  ion-label p {
+    font-size: 14px;
+  }
+  
+  ion-label p:nth-child(2) { // Precio
+    color: #ffffff;
+  }
+  
+  ion-label p:nth-child(3) { // Descuento
+    color: #4caf50;
+  }
+  
+  ion-thumbnail img {
+    border-radius: 8px;
+  }
+  
+  ion-infinite-scroll-content {
+    --spinner-color: #ffffff;
+    --loading-text-color: #ffffff;
+  }
+  
+  /* Estilo del botón de logout */
+  .logout-button {
+    --background: #b0b0b0; // Fondo gris para el botón
+    color: #ff0000; // Texto en rojo
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #b0b0b0;
+    display: flex; // Alineación centrada
+    align-items: center; // Centrado vertical
+    justify-content: center; // Centrado horizontal
+    font-weight: bold;
+  }
+  
+  .logout-button ion-icon {
+    margin-right: 5px;
+    color: #ff0000; // Icono en rojo
+  }
+  
